@@ -18,7 +18,7 @@ def check_psw_digit(psw):
   return result
 
 def check_psw_lower(psw):
-  result = any(char.isupper() for char in psw)
+  result = any(char.islower() for char in psw)
   return result
 
 def check_psw(psw):
