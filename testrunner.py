@@ -51,25 +51,40 @@ def test_check_psw8():
 
 # TODO write the unit tests for the new functions, remove the comment notation and replace assert False with your code: ---------------------------- 
 # 1. Test that two equal passwords return true
-'''def test_psw_equal1():
-  assert False
+def test_psw_equal1():
+  psw1 = "Qwerty$£@55"
+  psw2 = "Qwerty$£@55"
+  assert check_psw_equal(psw1, psw2) is True
 
 # 2. Test that the function is case sensitive
 def test_psw_equal2():
-  assert False
+  psw1 = "qwerty$£@55"
+  psw2 = "Qwerty$£@55"
+  assert check_psw_equal(psw1, psw2) is False
 
 # 3. Test that two inequal passwords return false
 def test_psw_equal3():
-  assert False
+  psw1 = "Qwerty$£@5"
+  psw2 = "Qwerty$£@55"
+  assert check_psw_equal(psw1, psw2) is False
 
 # 4. Test that two equal passwords in the correct format and a correct email return true
 def test_check_credentials1():
-  assert False
+  psw1 = "Qwerty$£@55"
+  psw2 = "Qwerty$£@55"
+  email = "myname236@gmail.com"
+  assert check_credentials(email, psw1, psw2) is True
 
 # 5. Test that two inequal passwords in the correct format and a correct email return false
 def test_check_credentials2():
-  assert False
+  psw1 = "Qwerty$£@55"
+  psw2 = "Qwerty$£@5"
+  email = "myname236@gmail.com"
+  assert check_credentials(email, psw1, psw2) is False
 
 # 6. Test that two equal passwords in the correct format and an incorrect email return false
 def test_check_credentials3():
-  assert False'''
+  psw1 = "Qwerty$£@55"
+  psw2 = "Qwerty$£@55"
+  email = "myname236gmail.com"
+  assert check_credentials(email, psw1, psw2) is False
